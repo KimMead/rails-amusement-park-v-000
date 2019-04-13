@@ -1,0 +1,13 @@
+<h1>Attractions#index</h1>
+
+<ul>
+<h1>Attractions</h1>
+<% if current_user.admin %>
+  <%= render partial: 'admin', locals: {attractions: @attractions} %>
+<% else %>
+  <ul>
+  <% @attractions.each do |attraction| %>
+    <li><%= link_to "Go on #{attraction.name}", attraction_path(attraction) %></li>
+  <% end %>
+  </ul>
+<% end %>
