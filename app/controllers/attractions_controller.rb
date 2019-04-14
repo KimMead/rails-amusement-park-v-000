@@ -2,12 +2,12 @@ class AttractionsController < ApplicationController
     before_action :admin_only, except: [:index, :show]
     
     def index
-        current_user 
+         
         @attractions = Attraction.all
     end
     
     def show
-        current_user 
+         
         @attraction = Attraction.find(params[:id])
     end
     
@@ -29,6 +29,12 @@ class AttractionsController < ApplicationController
         @attraction.update(attractions_params)
         redirect_to attraction_path(@attraction) 
     end 
+
+    def destroy
+        @attraction = Attraction.find(params[:id])
+        @attraction.destroy
+        redirect_to attractions_path
+      end
     
     private
     
