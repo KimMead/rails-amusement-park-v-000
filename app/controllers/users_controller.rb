@@ -8,14 +8,12 @@ class UsersController < ApplicationController
       @user = User.create(user_params)
       session[:user_id] = @user.id
       redirect_to user_path(@user)
-    end 
+    end  
   
     def show    
-      @user = User.find_by(id: params[:id])
-      if !current_user.admin 
-        if current_user != @user 
-          redirect_to root_path
-        end
+      @user = User.find(params[:id])    
+        if @user != current_user       
+      redirect_to root_path  
       end   
     end
   
@@ -33,6 +31,7 @@ class UsersController < ApplicationController
         :nausea,
         :tickets,
         :password,
+        :admin
       )
     end
 end 

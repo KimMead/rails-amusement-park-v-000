@@ -10,6 +10,12 @@ class ApplicationController < ActionController::Base
     !!current_user
   end
 
+  def authentication_required 
+    if !logged_in?
+      redirect_to root_path 
+    end 
+  end 
+
   def admin_only 
     unless current_user.admin 
       redirect_to user_path(current_user)

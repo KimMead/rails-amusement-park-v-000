@@ -16,7 +16,7 @@ class AttractionsController < ApplicationController
     end
     
     def create
-        attraction = Attraction.create(attraction_params)
+        @attraction = Attraction.create(attractions_params)
         redirect_to attraction_path(@attraction)
     end
     
@@ -33,7 +33,7 @@ class AttractionsController < ApplicationController
     private
     
     
-    def attraction_params
+    def attractions_params
         params.require(:attraction).permit(:name, :min_height,
                                           :happiness_rating, :nausea_rating, :tickets)
     end
