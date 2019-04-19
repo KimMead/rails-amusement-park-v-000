@@ -63,9 +63,14 @@ GEM
       rack (>= 1.0.0)
       rack-test (>= 0.5.4)
       xpath (>= 2.0, < 4.0)
+<<<<<<< HEAD
     childprocess (0.9.0)
       ffi (~> 1.0, >= 1.0.11)
     coderay (1.1.2)
+=======
+    childprocess (1.0.1)
+      rake (< 13.0)
+>>>>>>> 7aa9458e5a97426de704fa4edabbd867b5678a7c
     coffee-rails (4.2.2)
       coffee-script (>= 2.2.0)
       railties (>= 4.0.0)
@@ -108,9 +113,12 @@ GEM
     nio4r (2.3.1)
     nokogiri (1.10.2)
       mini_portile2 (~> 2.4.0)
+<<<<<<< HEAD
     pry (0.12.2)
       coderay (~> 1.1.0)
       method_source (~> 0.9.0)
+=======
+>>>>>>> 7aa9458e5a97426de704fa4edabbd867b5678a7c
     public_suffix (3.0.3)
     puma (3.12.1)
     rack (2.0.7)
@@ -177,8 +185,13 @@ GEM
       sprockets (>= 2.8, < 4.0)
       sprockets-rails (>= 2.0, < 4.0)
       tilt (>= 1.1, < 3)
+<<<<<<< HEAD
     selenium-webdriver (3.141.0)
       childprocess (~> 0.5)
+=======
+    selenium-webdriver (3.141.5926)
+      childprocess (>= 0.5, < 2.0)
+>>>>>>> 7aa9458e5a97426de704fa4edabbd867b5678a7c
       rubyzip (~> 1.2, >= 1.2.2)
     spring (2.0.2)
       activesupport (>= 4.2)
@@ -227,7 +240,10 @@ DEPENDENCIES
   database_cleaner
   jbuilder (~> 2.5)
   listen (>= 3.0.5, < 3.2)
+<<<<<<< HEAD
   pry
+=======
+>>>>>>> 7aa9458e5a97426de704fa4edabbd867b5678a7c
   puma (~> 3.7)
   rack_session_access
   rails (~> 5.1)
